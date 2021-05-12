@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/harrystyles.css" />
+
+    <title>First Challenge</title>
+  </head>
+  <body>
+    <div class="verticalign">
+      <div class="container">
+        <div class="info">
+          <h1>Get <span>insights</span> that help your business grow.</h1>
+          <p>
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="side">
+            <ul class="side">
+              <li>
+                <h1>10k+ <span class="stats">companies</span></h1>
+              </li>
+
+              <li>
+                <h1>314 <span class="stats">templates</span></h1>
+              </li>
+
+              <li>
+                <h1>12m+<span class="stats">queries</span></h1>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="imgcont">
+          <!-- <img
+            src="/images/image-header-desktop.jpg"
+            alt=""
+            height="459px"
+            width="640px"
+          /> -->
+          <div class="card"></div>
+        </div>
+      </div>
+    </div>
+    <p class="miggle">
+      Challenged by
+      <a href="https://www.frontendmentor.io/solutions">Frontend Mentor.</a>
+      Coded by <a href="https://www.frontendmentor.io/profile/Brezus">Millz</a>.
+    </p>
+  </body>
+</html>
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
+/* font-family: 'Inter', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+  --verydarkblue: hsl(233, 47%, 7%);
+  --darkdesaturatedblue: hsl(244, 38%, 16%);
+  --softviolet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --sliglthlytransparentwhite: hsla(0, 0%, 100%, 0.75);
+  --slightlytransparentwhiteish: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  background-color: var(--verydarkblue);
+  height: 100vh;
+}
+.verticalign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+@media screen and (max-width: 500px) {
+  .verticalign {
+    height: 200vh;
+  }
+}
+.container {
+  width: 70%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 63%;
+  position: relative;
+  min-width: 30%;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}
+h1,
+p {
+}
+h1 {
+  color: var(--white);
+  font-weight: 700;
+}
+h1 span {
+  color: var(--softviolet);
+}
+p {
+  color: var(--sliglthlytransparentwhite);
+}
+.stats {
+  color: var(--slightlytransparentwhiteish);
+}
+.info {
+  display: block;
+  height: 100%;
+  background-color: var(--darkdesaturatedblue);
+  width: 45%;
+  padding: 30px 0px;
+  flex: 1;
+  border: 2px solid wheat;
+  min-height: 30%;
+}
+/* .info h1,
+.info p {
+  width: 30%;
+} */
+.info > h1 {
+  margin: 30px 50px 0px 45px;
+  width: 80%;
+  font-size: 35px;
+}
+.info p {
+  width: 70%;
+  margin: 10px 50px 0px 45px;
+  font-size: 1em;
+}
+.sidebyside {
+  width: 400px;
+}
+.imgcont {
+  display: block;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(white, white),
+    url(/images/image-header-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--softviolet);
+  background-blend-mode: multiply;
+  opacity: 0.9;
+  flex: 1;
+}
+p ~ div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  min-height: 30%;
+}
+
+/* .align,
+.stats {
+  display: block;
+} */
+ul li h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.stats {
+  font-size: 0.5em;
+  display: block;
+}
+ul li {
+  list-style: none;
+  text-transform: uppercase;
+}
+.side {
+  display: flex;
+  margin-left: 22px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+ul li h1 {
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+h1,
+ul li {
+  line-height: 1.2;
+}
+h1,
+p {
+  font-family: "Inter", sans-serif;
+}
+.stats {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+.miggle {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+}
